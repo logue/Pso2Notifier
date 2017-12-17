@@ -3,7 +3,10 @@ using System.Windows.Media;
 
 namespace Pso2Notifier.Models
 {
-    class ApplicationTheme : BindableBase
+    /// <summary>
+    /// Metro Theme Model
+    /// </summary>
+    public class ApplicationTheme : BindableBase
     {
         private string name;
 

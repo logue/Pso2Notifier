@@ -34,178 +34,179 @@ using System.Runtime.Serialization;
 */
 namespace Pso2Notifier.Models
 {
-[DataContract]
-class Pso2AlertApi : BindableBase
-{
-    private string uri;
-    /// <summary>
-    /// Constructor
-    /// </summary>
-    public Pso2AlertApi()
+    [DataContract]
+    public class Pso2AlertApi : BindableBase
     {
-        Pso2Alert pso2a = new Pso2Alert();
-        // Pso2Alert eq.json ignoles when not Pso2Alert user agent.
-        // Then, set user agent string from pso2alert.json Version value.
-        Client.setUa("Pso2Alert" + "_" + pso2a.Version);
-        // uri of eq.json
-        uri = pso2a.API;
-    }
-    /// <summary>
-    /// Fetch eq.json
-    /// </summary>
-    public void fetch()
-    {
-        var json = Client.getJson(uri)[0].GetObject();
-        _Maintenance = json["Maintenance"].GetBoolean();
-        _Now = json["Now"].GetString();
-        _HalfHour = json["HalfHour"].GetString();
-        _OneLater = json["OneLater"].GetString();
-        _OneHalfLater = json["OneHalfLater"].GetString();
-        _TwoLater = json["TwoLater"].GetString();
-        _TwoHalfLater = json["TwoHalfLater"].GetString();
-        _ThreeLater = json["ThreeLater"].GetString();
-        _ThreeHalfLater = json["ThreeHalfLater"].GetString();
+        private string uri;
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        public Pso2AlertApi()
+        {
+            Pso2Alert pso2a = new Pso2Alert();
+            // Pso2Alert eq.json ignoles when not Pso2Alert user agent.
+            // Then, set user agent string from pso2alert.json Version value.
+            Client.setUa("Pso2Alert" + "_" + pso2a.Version);
+            // uri of eq.json
+            uri = pso2a.API;
+        }
+        /// <summary>
+        /// Fetch eq.json
+        /// </summary>
+        public void reload()
+        {
+            var json = Client.getJson(uri)[0].GetObject();
 
-        _JST = Convert.ToDouble(json["JST"].GetString());
+            _Maintenance = json["Maintenance"].GetBoolean();
+            _Now = json["Now"].GetString();
+            _HalfHour = json["HalfHour"].GetString();
+            _OneLater = json["OneLater"].GetString();
+            _OneHalfLater = json["OneHalfLater"].GetString();
+            _TwoLater = json["TwoLater"].GetString();
+            _TwoHalfLater = json["TwoHalfLater"].GetString();
+            _ThreeLater = json["ThreeLater"].GetString();
+            _ThreeHalfLater = json["ThreeHalfLater"].GetString();
 
-        _Ship1 = json["Ship1"].GetString();
-        _Ship2 = json["Ship2"].GetString();
-        _Ship3 = json["Ship3"].GetString();
-        _Ship4 = json["Ship4"].GetString();
-        _Ship5 = json["Ship5"].GetString();
-        _Ship6 = json["Ship6"].GetString();
-        _Ship7 = json["Ship7"].GetString();
-        _Ship8 = json["Ship8"].GetString();
-        _Ship9 = json["Ship9"].GetString();
-        _Ship10 = json["Ship10"].GetString();
-    }
+            _JST = Convert.ToDouble(json["JST"].GetString());
 
-    private bool _Maintenance;
+            _Ship1 = json["Ship1"].GetString();
+            _Ship2 = json["Ship2"].GetString();
+            _Ship3 = json["Ship3"].GetString();
+            _Ship4 = json["Ship4"].GetString();
+            _Ship5 = json["Ship5"].GetString();
+            _Ship6 = json["Ship6"].GetString();
+            _Ship7 = json["Ship7"].GetString();
+            _Ship8 = json["Ship8"].GetString();
+            _Ship9 = json["Ship9"].GetString();
+            _Ship10 = json["Ship10"].GetString();
+        }
 
-    private string _Now;
-    private string _HalfHour;
-    private string _OneLater;
-    private string _OneHalfLater;
-    private string _TwoLater;
-    private string _TwoHalfLater;
-    private string _ThreeLater;
-    private string _ThreeHalfLater;
+        private bool _Maintenance;
 
-    private double _JST;
+        private string _Now;
+        private string _HalfHour;
+        private string _OneLater;
+        private string _OneHalfLater;
+        private string _TwoLater;
+        private string _TwoHalfLater;
+        private string _ThreeLater;
+        private string _ThreeHalfLater;
 
-    private string _Ship1;
-    private string _Ship2;
-    private string _Ship3;
-    private string _Ship4;
-    private string _Ship5;
-    private string _Ship6;
-    private string _Ship7;
-    private string _Ship8;
-    private string _Ship9;
-    private string _Ship10;
+        private double _JST;
 
-    [DataMember]
-    public bool Maintenance
-    {
-        get { return _Maintenance; }
-    }
+        private string _Ship1;
+        private string _Ship2;
+        private string _Ship3;
+        private string _Ship4;
+        private string _Ship5;
+        private string _Ship6;
+        private string _Ship7;
+        private string _Ship8;
+        private string _Ship9;
+        private string _Ship10;
 
-    [DataMember]
-    public string Now
-    {
-        get { return _Now; }
-    }
-    [DataMember]
-    public string HalfHour
-    {
-        get { return _HalfHour; }
-    }
-    [DataMember]
-    public string OneLater
-    {
-        get { return _OneLater; }
-    }
-    [DataMember]
-    public string OneHalfLater
-    {
-        get { return _OneHalfLater; }
-    }
-    [DataMember]
-    public string TwoLater
-    {
-        get { return _TwoLater; }
-    }
-    [DataMember]
-    public string TwoHalfLater
-    {
-        get { return _TwoHalfLater; }
-    }
-    [DataMember]
-    public string ThreeLater
-    {
-        get { return _ThreeLater; }
-    }
-    [DataMember]
-    public string ThreeHalfLater
-    {
-        get { return _ThreeHalfLater; }
-    }
+        [DataMember]
+        public bool Maintenance
+        {
+            get { return _Maintenance; }
+        }
 
-    [DataMember]
-    public double JST
-    {
-        get { return _JST; }
-    }
+        [DataMember]
+        public string Now
+        {
+            get { return _Now; }
+        }
+        [DataMember]
+        public string HalfHour
+        {
+            get { return _HalfHour; }
+        }
+        [DataMember]
+        public string OneLater
+        {
+            get { return _OneLater; }
+        }
+        [DataMember]
+        public string OneHalfLater
+        {
+            get { return _OneHalfLater; }
+        }
+        [DataMember]
+        public string TwoLater
+        {
+            get { return _TwoLater; }
+        }
+        [DataMember]
+        public string TwoHalfLater
+        {
+            get { return _TwoHalfLater; }
+        }
+        [DataMember]
+        public string ThreeLater
+        {
+            get { return _ThreeLater; }
+        }
+        [DataMember]
+        public string ThreeHalfLater
+        {
+            get { return _ThreeHalfLater; }
+        }
 
-    [DataMember]
-    public string Ship1
-    {
-        get { return _Ship1; }
+        [DataMember]
+        public double JST
+        {
+            get { return _JST; }
+        }
+
+        [DataMember]
+        public string Ship1
+        {
+            get { return _Ship1; }
+        }
+        [DataMember]
+        public string Ship2
+        {
+            get { return _Ship2; }
+        }
+        [DataMember]
+        public string Ship3
+        {
+            get { return _Ship3; }
+        }
+        [DataMember]
+        public string Ship4
+        {
+            get { return _Ship4; }
+        }
+        [DataMember]
+        public string Ship5
+        {
+            get { return _Ship5; }
+        }
+        [DataMember]
+        public string Ship6
+        {
+            get { return _Ship6; }
+        }
+        [DataMember]
+        public string Ship7
+        {
+            get { return _Ship7; }
+        }
+        [DataMember]
+        public string Ship8
+        {
+            get { return _Ship8; }
+        }
+        [DataMember]
+        public string Ship9
+        {
+            get { return _Ship9; }
+        }
+        [DataMember]
+        public string Ship10
+        {
+            get { return _Ship10; }
+        }
     }
-    [DataMember]
-    public string Ship2
-    {
-        get { return _Ship2; }
-    }
-    [DataMember]
-    public string Ship3
-    {
-        get { return _Ship3; }
-    }
-    [DataMember]
-    public string Ship4
-    {
-        get { return _Ship1; }
-    }
-    [DataMember]
-    public string Ship5
-    {
-        get { return _Ship1; }
-    }
-    [DataMember]
-    public string Ship6
-    {
-        get { return _Ship1; }
-    }
-    [DataMember]
-    public string Ship7
-    {
-        get { return _Ship1; }
-    }
-    [DataMember]
-    public string Ship8
-    {
-        get { return _Ship1; }
-    }
-    [DataMember]
-    public string Ship9
-    {
-        get { return _Ship1; }
-    }
-    [DataMember]
-    public string Ship10
-    {
-        get { return _Ship1; }
-    }
-}
 }

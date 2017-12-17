@@ -5,21 +5,24 @@
                       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                       xmlns:prism="http://prismlibrary.com/"
                       xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                      xmlns:dialog="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro"
+                      xmlns:v="clr-namespace:Pso2Notifier.Views"
                       xmlns:vm="clr-namespace:Pso2Notifier.ViewModels"
                       xmlns:lex="http://wpflocalizeextension.codeplex.com"
                       xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
-                      d:DataContext="{d:DesignInstance {x:Type vm:MainWindowViewModel}}"
                       prism:ViewModelLocator.AutoWireViewModel="True"
                       mc:Ignorable="d"
                       lex:LocalizeDictionary.DesignCulture="ja-jp"
                       lex:ResxLocalizationProvider.DefaultAssembly="Pso2Notifier"
                       lex:ResxLocalizationProvider.DefaultDictionary="Resources"
+                      dialog:DialogParticipation.Register="{Binding}"
                       TitleCharacterCasing="Normal"
                       Title="MainWindow" 
                       Height="350" 
                       Width="525"
                       GlowBrush="{DynamicResource AccentColorBrush}"
                       NonActiveGlowBrush="{DynamicResource ValidationBrush5}"
+
                       ResizeMode="CanMinimize">
     <controls:MetroWindow.Resources>
         <lex:DefaultConverter x:Key="DefaultConverter"/>
@@ -27,7 +30,7 @@
     </controls:MetroWindow.Resources>
     <controls:MetroWindow.RightWindowCommands>
         <controls:WindowCommands>
-            <Button x:Name="ReloadButton" Click="ReloadButton_Click">
+            <Button x:Name="ReloadButton" Command="{Binding ReloadCommand}">
                 <StackPanel Orientation="Horizontal">
                     <iconPacks:PackIconMaterial Kind="CheckboxMarkedCircleOutline" />
                     <TextBlock Margin="5,0,0,0" Text="更新" />

@@ -6,7 +6,7 @@ namespace Pso2Notifier.Models
     /// <summary>
     /// バージョン情報
     /// </summary>
-    class AppAssembly : BindableBase
+    public class AppAssembly : BindableBase
     {
         public string Title
         {

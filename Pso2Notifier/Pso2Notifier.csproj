@@ -155,6 +155,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Views\TaskBarMenu.xaml.cs">
+      <DependentUpon>TaskBarMenu.xaml</DependentUpon>
+    </Compile>
     <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -177,6 +180,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\TaskBarMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -204,7 +211,8 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-    <None Include="Resources\icon.psd" />
+    <Resource Include="Resources\Raid_Loser1.png" />
+    <Resource Include="Resources\Raid_Loser2.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -222,6 +230,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="icon.ico" />
     <Resource Include="Resources\Amduskia_Caves.png" />
     <Resource Include="Resources\Amduskia_Chocolate.png" />
     <Resource Include="Resources\Amduskia_Sanctum.png" />
@@ -240,14 +249,13 @@
     <Resource Include="Resources\Defense_MiningBase5_VR.png" />
     <Resource Include="Resources\Earth_Tokyo.png" />
     <Resource Include="Resources\Earth_Vegas.png" />
-    <Resource Include="Resources\Harukotan_BlackArea.png" />
     <Resource Include="Resources\Harukotan_Shironia.png" />
     <Resource Include="Resources\icon.ico" />
     <Resource Include="Resources\Lilipur_Desert.png" />
+    <Resource Include="Resources\Lilipur_Easter.png" />
     <Resource Include="Resources\Lilipur_Quarry.png" />
     <Resource Include="Resources\Lilipur_ToT.png" />
     <Resource Include="Resources\Lilipur_Tunnels.png" />
-    <Resource Include="Resources\Lilipur_Wild_Easter.png" />
     <Resource Include="Resources\Mothership.png" />
     <Resource Include="Resources\Mothership_Facility.png" />
     <Resource Include="Resources\Naberius_Christmas.png" />
@@ -260,7 +268,6 @@
     <Resource Include="Resources\Raid_Double.png" />
     <Resource Include="Resources\Raid_Elder&amp;Looser.png" />
     <Resource Include="Resources\Raid_Elder.png" />
-    <Resource Include="Resources\Raid_Loser.png" />
     <Resource Include="Resources\Raid_Magatsu.png" />
     <Resource Include="Resources\Raid_Mother.png" />
     <Resource Include="Resources\Raid_Yamato.png" />
@@ -271,7 +278,7 @@
     <Resource Include="Resources\Wopal_Seabed.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="icon.ico" />
+    <Resource Include="Resources\Harukotan_Kuronia.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

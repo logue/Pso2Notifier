@@ -24,6 +24,7 @@ using Pso2Notifier.ViewModels;
 
 namespace Pso2Notifier.Views
 {
+    
     /// <summary>
     /// MainWindow.xaml の相互作用ロジック
     /// </summary>
@@ -33,10 +34,7 @@ namespace Pso2Notifier.Views
         {
             
             InitializeComponent();
-        }
-
-        private void ReloadButton_Click(object sender, System.Windows.RoutedEventArgs e)
-        {
+            //DataContext = new MainWindowViewModel(DialogCoordinator.Instance);
 
         }
     }

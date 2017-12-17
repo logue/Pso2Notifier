@@ -243,9 +243,9 @@ namespace Pso2Notifier.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap Harukotan_BlackArea {
+        internal static System.Drawing.Bitmap Harukotan_Kuronia {
             get {
-                object obj = ResourceManager.GetObject("Harukotan_BlackArea", resourceCulture);
+                object obj = ResourceManager.GetObject("Harukotan_Kuronia", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -263,9 +263,9 @@ namespace Pso2Notifier.Properties {
         /// <summary>
         ///   (アイコン) に類似した型 System.Drawing.Icon のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Icon Icon {
+        internal static System.Drawing.Icon icon {
             get {
-                object obj = ResourceManager.GetObject("Icon", resourceCulture);
+                object obj = ResourceManager.GetObject("icon", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
             }
         }
@@ -276,6 +276,16 @@ namespace Pso2Notifier.Properties {
         internal static System.Drawing.Bitmap Lilipur_Desert {
             get {
                 object obj = ResourceManager.GetObject("Lilipur_Desert", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap Lilipur_Easter {
+            get {
+                object obj = ResourceManager.GetObject("Lilipur_Easter", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -306,16 +316,6 @@ namespace Pso2Notifier.Properties {
         internal static System.Drawing.Bitmap Lilipur_Tunnels {
             get {
                 object obj = ResourceManager.GetObject("Lilipur_Tunnels", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
-        /// </summary>
-        internal static System.Drawing.Bitmap Lilipur_Wild_Easter {
-            get {
-                object obj = ResourceManager.GetObject("Lilipur_Wild_Easter", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -443,9 +443,19 @@ namespace Pso2Notifier.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap Raid_Loser {
+        internal static System.Drawing.Bitmap Raid_Loser1 {
             get {
-                object obj = ResourceManager.GetObject("Raid_Loser", resourceCulture);
+                object obj = ResourceManager.GetObject("Raid_Loser1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap Raid_Loser2 {
+            get {
+                object obj = ResourceManager.GetObject("Raid_Loser2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
