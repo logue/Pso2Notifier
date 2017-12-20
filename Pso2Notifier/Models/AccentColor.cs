@@ -1,7 +1,7 @@
 ﻿using Prism.Mvvm;
 using System.Windows.Media;
 
-namespace Pso2Notifier.Model
+namespace Pso2Notifier.Models
 {
     public class AccentColor : BindableBase
     {
