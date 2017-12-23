@@ -7,11 +7,9 @@ cache:
 - packages -> **\Pso2Notifier\packages.config
 
 platform:
-- x86
-- x64
+- Any CPU
 
 configuration:
-- Release
 - Debug
 
 build:
