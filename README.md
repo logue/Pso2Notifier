@@ -1,5 +1,7 @@
 # PSO2 Notifier
 
+![Splash](https://github.com/logue/Pso2Notifier/raw/master/Pso2Notifier/SplashScreen.png)
+
 Phantasy Star Online2の緊急クエストを３時間前から表示するディスクトップアプリです。Windows10以上で動作します。
 
 [![Build status](https://ci.appveyor.com/api/projects/status/4wmp6n7f9xar6wwt/branch/master?svg=true)](https://ci.appveyor.com/project/logue/pso2notifier/branch/master)
