@@ -1,20 +1,22 @@
 # PSO2 Notifier
 
-Phantasy Star Online2‚ÌƒGƒ}[ƒWƒFƒ“ƒV[ƒgƒ‰ƒCƒAƒ‹‚ğ•\¦‚·‚éƒfƒBƒXƒNƒgƒbƒvƒAƒvƒŠ‚Å‚·B
+Phantasy Star Online2ã®ç·Šæ€¥ã‚¯ã‚¨ã‚¹ãƒˆã‚’ï¼“æ™‚é–“å‰ã‹ã‚‰è¡¨ç¤ºã™ã‚‹ãƒ‡ã‚£ã‚¹ã‚¯ãƒˆãƒƒãƒ—ã‚¢ãƒ—ãƒªã§ã™ã€‚Windows10ä»¥ä¸Šã§å‹•ä½œã—ã¾ã™ã€‚
 
-## ŠÖ˜A
+[![Build status](https://ci.appveyor.com/api/projects/status/4wmp6n7f9xar6wwt/branch/master?svg=true)](https://ci.appveyor.com/project/logue/pso2notifier/branch/master)
 
-‚±‚ÌƒvƒƒOƒ‰ƒ€‚ğì¬‚·‚é‚É‚ ‚½‚èˆÈ‰º‚Ìƒ\[ƒX‚ğg—p‚µ‚Ä‚¢‚Ü‚·B
+## é–¢é€£
+
+ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã‚’ä½œæˆã™ã‚‹ã«ã‚ãŸã‚Šä»¥ä¸‹ã®ã‚½ãƒ¼ã‚¹ã‚’ä½¿ç”¨ã—ã¦ã„ã¾ã™ã€‚
 
 * [PSO2Alert](https://github.com/Arks-Layer/PSO2Alert)
 
 ## see also
 
-* [PSO2ModManager](https://github.com/PolCPP/PSO2-Mod-Manager) - Mod‚ÌŠÇ—ƒc[ƒ‹Œ“ƒuƒ‰ƒEƒUB“ú–{Œê‰»iŒµ–§‚É‚Í‘½Œ¾Œê‰»j‚ÆGUI‰ü—Ç‚ğ’S“–B
-* [Pso2Packer](https://github.com/logue/Pso2Packer) - IceŒ`®‚Ìƒtƒ@ƒCƒ‹‚Ì“WŠJ/‰ğ“€‚ğ‚·‚é‚½‚ß‚Ìƒc[ƒ‹B
+* [PSO2ModManager](https://github.com/PolCPP/PSO2-Mod-Manager) - Modã®ç®¡ç†ãƒ„ãƒ¼ãƒ«å…¼ãƒ–ãƒ©ã‚¦ã‚¶ã€‚æ—¥æœ¬èªåŒ–ï¼ˆå³å¯†ã«ã¯å¤šè¨€èªåŒ–ï¼‰ã¨GUIæ”¹è‰¯ã‚’æ‹…å½“ã€‚
+* [Pso2Packer](https://github.com/logue/Pso2Packer) - Iceå½¢å¼ã®ãƒ•ã‚¡ã‚¤ãƒ«ã®å±•é–‹/è§£å‡ã‚’ã™ã‚‹ãŸã‚ã®ãƒ„ãƒ¼ãƒ«ã€‚
 
-## ƒ‰ƒCƒZƒ“ƒX
+## ãƒ©ã‚¤ã‚»ãƒ³ã‚¹
 
 [Genreal Public Lisence v3](LICENSE)
 
-¦PSO2Alert‚Ìƒ‰ƒCƒZƒ“ƒX‚ÉŠî‚Ã‚­B
+â€»PSO2Alertã®ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã«åŸºã¥ãã€‚
