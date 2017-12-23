@@ -23,15 +23,22 @@ namespace Pso2Notifier.Models
     class Pso2Alert : BindableBase
     {
         public static readonly string DefaultUri = "https://pso2.acf.me.uk/PSO2Alert.json";
-        
+
+        private static Pso2Alert _instance = new Pso2Alert();
+
         private string _Version;
         private string _Application;
         private string _Updater;
         private string _XML;
         private string _API;
+        private bool initialized = false;
    
         public Pso2Alert(string uri = "")
         {
+            if (initialized)
+            {
+                return;
+            }
             if (uri == "")
             {
                 uri = DefaultUri;
@@ -42,6 +49,12 @@ namespace Pso2Notifier.Models
             _Updater = json["Updater"].GetString();
             _XML = json["XML"].GetString();
             _API = json["API"].GetString();
+            initialized = true;
+        }
+
+        public Pso2Alert instance()
+        {
+            return _instance;
         }
   
         [DataMember]

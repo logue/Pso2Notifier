@@ -47,6 +47,7 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -68,6 +69,7 @@
         <TextBlock Grid.Column="1" Grid.Row="6" Text="{Binding IncomingEmergencyQuests[6]}" />
         <Label Grid.Row="7" Content="３時間半後"/>
         <TextBlock Grid.Column="1" Grid.Row="7" Text="{Binding IncomingEmergencyQuests[7]}" />
+        <Button Grid.Column="1" Grid.Row="8" x:Name="Button_Test" Content="Test" Click="Button_Test_Click" />
     </Grid>
     
 </controls:MetroWindow>

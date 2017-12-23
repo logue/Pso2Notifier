@@ -8,28 +8,28 @@ using System.Runtime.Serialization;
 
 /*
 [
-{
-    "HalfHour": "",
-    "JST": "21",
-    "Maintenance": false,
-    "Now": "",
-    "OneHalfLater": "",
-    "OneLater": "Phantom God",
-    "Ship1": "",
-    "Ship10": "",
-    "Ship2": "",
-    "Ship3": "",
-    "Ship4": "",
-    "Ship5": "",
-    "Ship6": "",
-    "Ship7": "",
-    "Ship8": "",
-    "Ship9": "",
-    "ThreeHalfLater": "",
-    "ThreeLater": "Live Concert",
-    "TwoHalfLater": "",
-    "TwoLater": ""
-}
+    {
+        "HalfHour": "",
+        "JST": "21",
+        "Maintenance": false,
+        "Now": "",
+        "OneHalfLater": "",
+        "OneLater": "Phantom God",
+        "Ship1": "",
+        "Ship10": "",
+        "Ship2": "",
+        "Ship3": "",
+        "Ship4": "",
+        "Ship5": "",
+        "Ship6": "",
+        "Ship7": "",
+        "Ship8": "",
+        "Ship9": "",
+        "ThreeHalfLater": "",
+        "ThreeLater": "Live Concert",
+        "TwoHalfLater": "",
+        "TwoLater": ""
+    }
 ]
 */
 namespace Pso2Notifier.Models
@@ -38,23 +38,30 @@ namespace Pso2Notifier.Models
     public class Pso2AlertApi : BindableBase
     {
         private string uri;
+        private string ua;
+        private DateTime lastLoaded;
+
         /// <summary>
         /// Constructor
         /// </summary>
         public Pso2AlertApi()
         {
-            Pso2Alert pso2a = new Pso2Alert();
+            var pso2a = new Pso2Alert();
             // Pso2Alert eq.json ignoles when not Pso2Alert user agent.
             // Then, set user agent string from pso2alert.json Version value.
-            Client.setUa("Pso2Alert" + "_" + pso2a.Version);
+            ua = pso2a.Version;
             // uri of eq.json
             uri = pso2a.API;
+            lastLoaded = DateTime.MinValue;
         }
         /// <summary>
         /// Fetch eq.json
         /// </summary>
         public void reload()
-        {
+        {            
+            // Change UA.
+            Client.setUa("Pso2Alert" + "_" + ua);
+            // Fetch eq.json
             var json = Client.getJson(uri)[0].GetObject();
 
             _Maintenance = json["Maintenance"].GetBoolean();
@@ -79,6 +86,8 @@ namespace Pso2Notifier.Models
             _Ship8 = json["Ship8"].GetString();
             _Ship9 = json["Ship9"].GetString();
             _Ship10 = json["Ship10"].GetString();
+
+            lastLoaded = DateTime.Now;
         }
 
         private bool _Maintenance;
