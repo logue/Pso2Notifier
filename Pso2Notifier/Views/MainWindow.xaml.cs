@@ -146,7 +146,7 @@ namespace Pso2Notifier.Views
             }
 
             // Specify the absolute path to an image 
-            String imagePath = "file:///" + Path.GetFullPath("Resources/Wopal_Beach.png");
+            String imagePath = "file:///" + Path.GetFullPath("./Resources/Wopal_Beach.png");
             //String imagePath = "ms-appx:///Wopal_Beach.png";
             XmlNodeList imageElements = toastXml.GetElementsByTagName("image");
             imageElements[0].Attributes.GetNamedItem("src").NodeValue = imagePath;
